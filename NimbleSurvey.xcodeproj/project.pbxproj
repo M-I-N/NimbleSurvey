@@ -12,6 +12,9 @@
 		AFAD4F3B283A412300773FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAD4F39283A412300773FF0 /* Main.storyboard */; };
 		AFAD4F3D283A412600773FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFAD4F3C283A412600773FF0 /* Assets.xcassets */; };
 		AFAD4F40283A412600773FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAD4F3E283A412600773FF0 /* LaunchScreen.storyboard */; };
+		AFAD4F4D283A45E300773FF0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */; };
+		AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F4E283A463500773FF0 /* UIStoryboardNames.swift */; };
+		AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F50283A465000773FF0 /* UIViewController+Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		AFAD4F3C283A412600773FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFAD4F3F283A412600773FF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFAD4F41283A412600773FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		AFAD4F4E283A463500773FF0 /* UIStoryboardNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardNames.swift; sourceTree = "<group>"; };
+		AFAD4F50283A465000773FF0 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				AFAD4F4A283A459B00773FF0 /* App */,
-				AFAD4F49283A458F00773FF0 /* Storyboards */,
+				AFAD4F4B283A45CD00773FF0 /* View */,
+				AFAD4F52283A465500773FF0 /* Protocols+Extensions */,
 				AFAD4F48283A457E00773FF0 /* Resources */,
 				AFAD4F47283A453B00773FF0 /* SupportingFiles */,
 			);
@@ -83,6 +90,7 @@
 			children = (
 				AFAD4F39283A412300773FF0 /* Main.storyboard */,
 				AFAD4F3E283A412600773FF0 /* LaunchScreen.storyboard */,
+				AFAD4F4E283A463500773FF0 /* UIStoryboardNames.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -94,6 +102,23 @@
 				AFAD4F35283A412300773FF0 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		AFAD4F4B283A45CD00773FF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD4F49283A458F00773FF0 /* Storyboards */,
+				AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFAD4F52283A465500773FF0 /* Protocols+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD4F50283A465000773FF0 /* UIViewController+Storyboard.swift */,
+			);
+			path = "Protocols+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFAD4F4D283A45E300773FF0 /* SignupViewController.swift in Sources */,
+				AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */,
 				AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */,
+				AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */,
 				AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
