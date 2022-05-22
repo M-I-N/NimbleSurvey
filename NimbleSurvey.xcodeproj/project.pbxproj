@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */; };
 		AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F33283A412300773FF0 /* AppDelegate.swift */; };
 		AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F35283A412300773FF0 /* SceneDelegate.swift */; };
 		AFAD4F3B283A412300773FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAD4F39283A412300773FF0 /* Main.storyboard */; };
@@ -15,9 +16,13 @@
 		AFAD4F4D283A45E300773FF0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */; };
 		AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F4E283A463500773FF0 /* UIStoryboardNames.swift */; };
 		AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F50283A465000773FF0 /* UIViewController+Storyboard.swift */; };
+		AFAD4F55283A490200773FF0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F53283A490200773FF0 /* Endpoint.swift */; };
+		AFAD4F56283A490200773FF0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F54283A490200773FF0 /* WebService.swift */; };
+		AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F58283A494100773FF0 /* SignupAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+Adapter.swift"; sourceTree = "<group>"; };
 		AFAD4F30283A412300773FF0 /* NimbleSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbleSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAD4F33283A412300773FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFAD4F35283A412300773FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +33,9 @@
 		AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		AFAD4F4E283A463500773FF0 /* UIStoryboardNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardNames.swift; sourceTree = "<group>"; };
 		AFAD4F50283A465000773FF0 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		AFAD4F53283A490200773FF0 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		AFAD4F54283A490200773FF0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		AFAD4F58283A494100773FF0 /* SignupAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF8E50D9283AA09F00B3866B /* API+Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */,
+				AFAD4F58283A494100773FF0 /* SignupAPI.swift */,
+			);
+			path = "API+Services";
+			sourceTree = "<group>";
+		};
 		AFAD4F27283A412300773FF0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +79,8 @@
 			children = (
 				AFAD4F4A283A459B00773FF0 /* App */,
 				AFAD4F4B283A45CD00773FF0 /* View */,
+				AF8E50D9283AA09F00B3866B /* API+Services */,
+				AFAD4F57283A490900773FF0 /* Networking */,
 				AFAD4F52283A465500773FF0 /* Protocols+Extensions */,
 				AFAD4F48283A457E00773FF0 /* Resources */,
 				AFAD4F47283A453B00773FF0 /* SupportingFiles */,
@@ -119,6 +138,15 @@
 				AFAD4F50283A465000773FF0 /* UIViewController+Storyboard.swift */,
 			);
 			path = "Protocols+Extensions";
+			sourceTree = "<group>";
+		};
+		AFAD4F57283A490900773FF0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD4F53283A490200773FF0 /* Endpoint.swift */,
+				AFAD4F54283A490200773FF0 /* WebService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,8 +222,12 @@
 			files = (
 				AFAD4F4D283A45E300773FF0 /* SignupViewController.swift in Sources */,
 				AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */,
+				AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */,
+				AFAD4F56283A490200773FF0 /* WebService.swift in Sources */,
 				AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */,
 				AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */,
+				AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */,
+				AFAD4F55283A490200773FF0 /* Endpoint.swift in Sources */,
 				AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
