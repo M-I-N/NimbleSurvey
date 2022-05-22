@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SignupService {
+    func signup(completion: @escaping (Result<Bool, Error>) -> Void)
+}
+
 class SignupViewController: UIViewController {
+    
+    var service: SignupService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
