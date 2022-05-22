@@ -54,14 +54,46 @@
 		AFAD4F32283A412300773FF0 /* NimbleSurvey */ = {
 			isa = PBXGroup;
 			children = (
-				AFAD4F33283A412300773FF0 /* AppDelegate.swift */,
-				AFAD4F35283A412300773FF0 /* SceneDelegate.swift */,
-				AFAD4F39283A412300773FF0 /* Main.storyboard */,
-				AFAD4F3C283A412600773FF0 /* Assets.xcassets */,
-				AFAD4F3E283A412600773FF0 /* LaunchScreen.storyboard */,
-				AFAD4F41283A412600773FF0 /* Info.plist */,
+				AFAD4F4A283A459B00773FF0 /* App */,
+				AFAD4F49283A458F00773FF0 /* Storyboards */,
+				AFAD4F48283A457E00773FF0 /* Resources */,
+				AFAD4F47283A453B00773FF0 /* SupportingFiles */,
 			);
 			path = NimbleSurvey;
+			sourceTree = "<group>";
+		};
+		AFAD4F47283A453B00773FF0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD4F41283A412600773FF0 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AFAD4F48283A457E00773FF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD4F3C283A412600773FF0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AFAD4F49283A458F00773FF0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD4F39283A412300773FF0 /* Main.storyboard */,
+				AFAD4F3E283A412600773FF0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AFAD4F4A283A459B00773FF0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD4F33283A412300773FF0 /* AppDelegate.swift */,
+				AFAD4F35283A412300773FF0 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 43XQUWJGKD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NimbleSurvey/Info.plist;
+				INFOPLIST_FILE = NimbleSurvey/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -312,7 +344,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 43XQUWJGKD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NimbleSurvey/Info.plist;
+				INFOPLIST_FILE = NimbleSurvey/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
