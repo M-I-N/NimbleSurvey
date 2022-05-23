@@ -18,5 +18,6 @@ struct NimbleEndpoint {
         case contentType = "application/json"
         case clientId = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE"
         case clientSecret = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU"
+        case passwordGrantType = "password"
     }
 }

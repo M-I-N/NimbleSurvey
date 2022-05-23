@@ -10,6 +10,8 @@
 		AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */; };
 		AFA31770283B802C0060FF51 /* Endpoint+NimbleDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */; };
 		AFA31772283B926B0060FF51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA31771283B926B0060FF51 /* LoginViewController.swift */; };
+		AFA31774283B94CC0060FF51 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA31773283B94CC0060FF51 /* LoginAPI.swift */; };
+		AFA31776283B956B0060FF51 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA31775283B956B0060FF51 /* AuthToken.swift */; };
 		AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F33283A412300773FF0 /* AppDelegate.swift */; };
 		AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F35283A412300773FF0 /* SceneDelegate.swift */; };
 		AFAD4F3B283A412300773FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAD4F39283A412300773FF0 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+Adapter.swift"; sourceTree = "<group>"; };
 		AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+NimbleDefaults.swift"; sourceTree = "<group>"; };
 		AFA31771283B926B0060FF51 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AFA31773283B94CC0060FF51 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		AFA31775283B956B0060FF51 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		AFAD4F30283A412300773FF0 /* NimbleSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbleSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAD4F33283A412300773FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFAD4F35283A412300773FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +63,17 @@
 				AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */,
 				AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */,
 				AFAD4F58283A494100773FF0 /* SignupAPI.swift */,
+				AFA31773283B94CC0060FF51 /* LoginAPI.swift */,
 			);
 			path = "API+Services";
+			sourceTree = "<group>";
+		};
+		AFA31777283B95700060FF51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFA31775283B956B0060FF51 /* AuthToken.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AFAD4F27283A412300773FF0 = {
@@ -83,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AFAD4F4A283A459B00773FF0 /* App */,
+				AFA31777283B95700060FF51 /* Model */,
 				AFAD4F4B283A45CD00773FF0 /* View */,
 				AF8E50D9283AA09F00B3866B /* API+Services */,
 				AFAD4F57283A490900773FF0 /* Networking */,
@@ -230,12 +244,14 @@
 				AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */,
 				AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */,
 				AFAD4F56283A490200773FF0 /* WebService.swift in Sources */,
+				AFA31774283B94CC0060FF51 /* LoginAPI.swift in Sources */,
 				AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */,
 				AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */,
 				AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */,
 				AFA31770283B802C0060FF51 /* Endpoint+NimbleDefaults.swift in Sources */,
 				AFAD4F55283A490200773FF0 /* Endpoint.swift in Sources */,
 				AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */,
+				AFA31776283B956B0060FF51 /* AuthToken.swift in Sources */,
 				AFA31772283B926B0060FF51 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
