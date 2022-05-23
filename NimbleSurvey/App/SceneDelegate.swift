@@ -14,10 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = makeSignupViewController { [weak self] in
-            self?.window?.rootViewController = self?.makeLoginViewController()
-            self?.window?.makeKeyAndVisible()
-        }
+        window?.rootViewController = makeLoginViewController()
         window?.makeKeyAndVisible()
     }
     
@@ -30,8 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return singUpVC
     }
     
-    private func makeLoginViewController() -> UIViewController {
-        UIViewController()
+    private func makeLoginViewController() -> LoginViewController {
+        LoginViewController.instantiateFromStoryboard()
     }
     
 }
