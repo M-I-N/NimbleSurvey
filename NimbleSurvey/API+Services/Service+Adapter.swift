@@ -16,28 +16,11 @@ enum SignupAdapterError: LocalizedError {
 class SignupAPIServiceAdapter: SignupService {
     let api: SignupAPI
     
-    var email: String?
-    var password: String?
-    var confirmPassword: String?
-    
     init(api: SignupAPI) {
         self.api = api
     }
     
-    func signup(completion: @escaping (Result<Void, Error>) -> Void) {
-        guard let email = email else {
-            completion(.failure(SignupAdapterError.noEmail))
-            return
-        }
-        guard let password = password else {
-            completion(.failure(SignupAdapterError.noPassword))
-            return
-        }
-        guard let confirmPassword = confirmPassword else {
-            completion(.failure(SignupAdapterError.noConfirmPassword))
-            return
-        }
-        
+    func signupWith(email: String, password: String, confirmPassword: String, completion: @escaping (Result<Void, Error>) -> Void) {
         let signUpRequest = SignupRequest(email: email, password: password, passwordConfirmation: confirmPassword)
         api.register(request: signUpRequest, completion: completion)
     }

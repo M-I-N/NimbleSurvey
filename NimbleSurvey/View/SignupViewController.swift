@@ -8,12 +8,12 @@
 import UIKit
 
 protocol SignupService {
-    func signup(completion: @escaping (Result<Void, Error>) -> Void)
+    func signupWith(email: String, password: String, confirmPassword: String, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 class SignupViewController: UIViewController {
     
-    var service: SignupAPIServiceAdapter?
+    var service: SignupService?
     
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -24,11 +24,11 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signupButtonTapped(_ sender: UIButton) {
-        service?.email = emailTextField.text
-        service?.password = passwordTextField.text
-        service?.confirmPassword = confirmPasswordTextField.text
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text,
+              let confirmPassword = confirmPasswordTextField.text else { return }
         
-        service?.signup { result in
+        service?.signupWith(email: email, password: password, confirmPassword: confirmPassword) { result in
             switch result {
             case .success:
                 break
