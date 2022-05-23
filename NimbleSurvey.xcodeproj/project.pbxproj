@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */; };
+		AFA31770283B802C0060FF51 /* Endpoint+NimbleDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */; };
 		AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F33283A412300773FF0 /* AppDelegate.swift */; };
 		AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F35283A412300773FF0 /* SceneDelegate.swift */; };
 		AFAD4F3B283A412300773FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAD4F39283A412300773FF0 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+Adapter.swift"; sourceTree = "<group>"; };
+		AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+NimbleDefaults.swift"; sourceTree = "<group>"; };
 		AFAD4F30283A412300773FF0 /* NimbleSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbleSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAD4F33283A412300773FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFAD4F35283A412300773FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */,
+				AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */,
 				AFAD4F58283A494100773FF0 /* SignupAPI.swift */,
 			);
 			path = "API+Services";
@@ -227,6 +230,7 @@
 				AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */,
 				AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */,
 				AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */,
+				AFA31770283B802C0060FF51 /* Endpoint+NimbleDefaults.swift in Sources */,
 				AFAD4F55283A490200773FF0 /* Endpoint.swift in Sources */,
 				AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */,
 			);

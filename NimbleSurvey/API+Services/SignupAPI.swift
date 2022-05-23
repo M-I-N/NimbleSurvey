@@ -50,7 +50,7 @@ struct SignupRequest: Endpoint {
     let passwordConfirmation: String
     
     var base: String {
-        "https://survey-api.nimblehq.co"
+        NimbleEndpoint.DefaultValues.domain.rawValue
     }
     
     var path: String {
@@ -64,7 +64,7 @@ struct SignupRequest: Endpoint {
     var queryItems: [URLQueryItem]? { nil }
     
     var httpBody: Data? {
-        let body = Body(user: Body.User(email: email, password: password, passwordConfirmation: passwordConfirmation))
+        let body = RequestBody(user: RequestBody.User(email: email, password: password, passwordConfirmation: passwordConfirmation))
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
         let data = try? encoder.encode(body)
@@ -72,10 +72,10 @@ struct SignupRequest: Endpoint {
     }
     
     var contentType: String? {
-        "application/json"
+        NimbleEndpoint.DefaultValues.contentType.rawValue
     }
     
-    struct Body: Encodable {
+    struct RequestBody: Encodable {
         struct User: Encodable {
             let email: String
             let password: String
@@ -83,7 +83,7 @@ struct SignupRequest: Endpoint {
         }
         
         let user: User
-        let clientId = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE"
-        let clientSecret = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU"
+        let clientId = NimbleEndpoint.DefaultValues.clientId.rawValue
+        let clientSecret = NimbleEndpoint.DefaultValues.clientSecret.rawValue
     }
 }
