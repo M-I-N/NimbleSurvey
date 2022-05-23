@@ -15,13 +15,23 @@ enum SignupAdapterError: LocalizedError {
 
 class SignupAPIServiceAdapter: SignupService {
     let api: SignupAPI
+    let signupCompletion: () -> Void
     
-    init(api: SignupAPI) {
+    init(api: SignupAPI, signupCompletion: @escaping () -> Void) {
         self.api = api
+        self.signupCompletion = signupCompletion
     }
     
     func signupWith(email: String, password: String, confirmPassword: String, completion: @escaping (Result<Void, Error>) -> Void) {
         let signUpRequest = SignupRequest(email: email, password: password, passwordConfirmation: confirmPassword)
-        api.register(request: signUpRequest, completion: completion)
+        api.register(request: signUpRequest) { [weak self] result in
+            switch result {
+            case .success:
+                completion(.success(()))
+                self?.signupCompletion()
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

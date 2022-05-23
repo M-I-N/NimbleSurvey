@@ -14,15 +14,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = makeRootViewController()
+        window?.rootViewController = makeSignupViewController { [weak self] in
+            self?.window?.rootViewController = self?.makeLoginViewController()
+            self?.window?.makeKeyAndVisible()
+        }
         window?.makeKeyAndVisible()
     }
     
-    private func makeRootViewController() -> SignupViewController {
+    private func makeSignupViewController(signupCompleted: @escaping () -> Void) -> SignupViewController {
         let singUpVC = SignupViewController.instantiateFromStoryboard()
-        let service = SignupAPIServiceAdapter(api: .shared)
+        
+        let service = SignupAPIServiceAdapter(api: .shared, signupCompletion: signupCompleted)
+        
         singUpVC.service = service
         return singUpVC
+    }
+    
+    private func makeLoginViewController() -> UIViewController {
+        UIViewController()
     }
     
 }
