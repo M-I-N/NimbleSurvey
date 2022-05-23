@@ -19,7 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeRootViewController() -> SignupViewController {
-        SignupViewController.instantiateFromStoryboard()
+        let singUpVC = SignupViewController.instantiateFromStoryboard()
+        let service = SignupAPIServiceAdapter(api: .shared)
+        singUpVC.service = service
+        return singUpVC
     }
     
 }

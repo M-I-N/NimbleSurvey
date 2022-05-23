@@ -27,7 +27,7 @@ class SignupAPI: WebService {
         session.finishTasksAndInvalidate()
     }
     
-    func register(request: SignupRequest, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func register(request: SignupRequest, completion: @escaping (Result<Void, Error>) -> Void) {
         publisher(for: request.urlRequest)
             .receive(on: DispatchQueue.main)
             .sink { receiveCompletion in
@@ -38,7 +38,7 @@ class SignupAPI: WebService {
                     break
                 }
             } receiveValue: {
-                completion(.success(true))
+                completion(.success(()))
             }
             .store(in: &cancellables)
     }
@@ -47,19 +47,43 @@ class SignupAPI: WebService {
 struct SignupRequest: Endpoint {
     let email: String
     let password: String
-    let confirmPassword: String
+    let passwordConfirmation: String
     
     var base: String {
-        "https://nimble-survey-web-staging.herokuapp.com/"
+        "https://survey-api.nimblehq.co"
     }
     
     var path: String {
         "/api/v1/registrations"
     }
     
-    var queryItems: [URLQueryItem]? {
-        [.init(name: "email", value: email),
-         .init(name: "password", value: password),
-         .init(name: "confirm_password", value: confirmPassword)]
+    var method: HTTPMethod {
+        .post
+    }
+    
+    var queryItems: [URLQueryItem]? { nil }
+    
+    var httpBody: Data? {
+        let body = Body(user: Body.User(email: email, password: password, passwordConfirmation: passwordConfirmation))
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        let data = try? encoder.encode(body)
+        return data
+    }
+    
+    var contentType: String? {
+        "application/json"
+    }
+    
+    struct Body: Encodable {
+        struct User: Encodable {
+            let email: String
+            let password: String
+            let passwordConfirmation: String
+        }
+        
+        let user: User
+        let clientId = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE"
+        let clientSecret = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU"
     }
 }

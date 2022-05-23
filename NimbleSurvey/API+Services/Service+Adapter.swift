@@ -24,7 +24,7 @@ class SignupAPIServiceAdapter: SignupService {
         self.api = api
     }
     
-    func signup(completion: @escaping (Result<Bool, Error>) -> Void) {
+    func signup(completion: @escaping (Result<Void, Error>) -> Void) {
         guard let email = email else {
             completion(.failure(SignupAdapterError.noEmail))
             return
@@ -38,7 +38,7 @@ class SignupAPIServiceAdapter: SignupService {
             return
         }
         
-        let signUpRequest = SignupRequest(email: email, password: password, confirmPassword: confirmPassword)
+        let signUpRequest = SignupRequest(email: email, password: password, passwordConfirmation: confirmPassword)
         api.register(request: signUpRequest, completion: completion)
     }
 }
