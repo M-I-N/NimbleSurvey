@@ -14,7 +14,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = makeLoginViewController()
+        window?.rootViewController = makeLoginViewController { [weak self] in
+            self?.window?.rootViewController = self?.makeHomeViewController()
+            self?.window?.makeKeyAndVisible()
+        }
         window?.makeKeyAndVisible()
     }
     
@@ -27,8 +30,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return singUpVC
     }
     
-    private func makeLoginViewController() -> LoginViewController {
-        LoginViewController.instantiateFromStoryboard()
+    private func makeLoginViewController(loginCompletion: @escaping () -> Void) -> LoginViewController {
+        let loginVC = LoginViewController.instantiateFromStoryboard()
+        
+        let service = LoginAPIServiceAdapter(api: .shared, loginCompletion: loginCompletion)
+        
+        loginVC.service = service
+        return loginVC
+    }
+    
+    private func makeHomeViewController() -> UIViewController {
+        UIViewController()
     }
     
 }

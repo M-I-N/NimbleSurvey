@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum SignupAdapterError: LocalizedError {
-    case noEmail
-    case noPassword
-    case noConfirmPassword
-}
-
 class SignupAPIServiceAdapter: SignupService {
     let api: SignupAPI
     let signupCompletion: () -> Void
@@ -29,6 +23,30 @@ class SignupAPIServiceAdapter: SignupService {
             case .success:
                 completion(.success(()))
                 self?.signupCompletion()
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+}
+
+class LoginAPIServiceAdapter: LoginService {
+    let api: LoginAPI
+    let loginCompletion: () -> Void
+    
+    init(api: LoginAPI, loginCompletion: @escaping () -> Void) {
+        self.api = api
+        self.loginCompletion = loginCompletion
+    }
+    
+    func loginWith(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        let loginRequest = LoginRequest(email: email, password: password)
+        api.token(request: loginRequest) { [weak self] result in
+            switch result {
+            case .success(let token):
+                print("Login succeeded with token: \(token)")
+                completion(.success(()))
+                self?.loginCompletion()
             case .failure(let error):
                 completion(.failure(error))
             }
