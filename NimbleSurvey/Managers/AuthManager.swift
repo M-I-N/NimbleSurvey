@@ -21,6 +21,13 @@ class AuthManager {
         get { getTokenFromUserDefaults() }
     }
     
+    var isTokenStillValid: Bool {
+        guard let token = token else { return false }
+        let expireTimeStamp = token.createdAt + token.expiresIn
+        let expireDate = Date(timeIntervalSince1970: TimeInterval(expireTimeStamp))
+        return expireDate > Date()
+    }
+    
     func save(token: Token) {
         self.token = token
         do {
