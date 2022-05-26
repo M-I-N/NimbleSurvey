@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF31C5CB283FD0CD00E517D1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31C5CA283FD0CD00E517D1 /* AuthManager.swift */; };
 		AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */; };
 		AFA31770283B802C0060FF51 /* Endpoint+NimbleDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */; };
 		AFA31772283B926B0060FF51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA31771283B926B0060FF51 /* LoginViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF31C5CA283FD0CD00E517D1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		AF8E50D7283A9E3500B3866B /* Service+Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+Adapter.swift"; sourceTree = "<group>"; };
 		AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+NimbleDefaults.swift"; sourceTree = "<group>"; };
 		AFA31771283B926B0060FF51 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF31C5CC283FD75600E517D1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AF31C5CA283FD0CD00E517D1 /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		AF8E50D9283AA09F00B3866B /* API+Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 				AFA31777283B95700060FF51 /* Model */,
 				AFAD4F4B283A45CD00773FF0 /* View */,
 				AF8E50D9283AA09F00B3866B /* API+Services */,
+				AF31C5CC283FD75600E517D1 /* Managers */,
 				AFAD4F57283A490900773FF0 /* Networking */,
 				AFAD4F52283A465500773FF0 /* Protocols+Extensions */,
 				AFAD4F48283A457E00773FF0 /* Resources */,
@@ -241,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFAD4F4D283A45E300773FF0 /* SignupViewController.swift in Sources */,
+				AF31C5CB283FD0CD00E517D1 /* AuthManager.swift in Sources */,
 				AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */,
 				AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */,
 				AFAD4F56283A490200773FF0 /* WebService.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    private let authManager = AuthManager.shared
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -33,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func makeLoginViewController(loginCompletion: @escaping () -> Void) -> LoginViewController {
         let loginVC = LoginViewController.instantiateFromStoryboard()
         
-        let service = LoginAPIServiceAdapter(api: .shared, loginCompletion: loginCompletion)
+        let service = LoginAPIServiceAdapter(api: .shared, authManager: authManager, loginCompletion: loginCompletion)
         
         loginVC.service = service
         return loginVC
