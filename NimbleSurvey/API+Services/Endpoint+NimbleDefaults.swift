@@ -19,5 +19,6 @@ struct NimbleEndpoint {
         case clientId = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE"
         case clientSecret = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU"
         case passwordGrantType = "password"
+        case refreshTokenGrantType = "refresh_token"
     }
 }

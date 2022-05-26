@@ -42,6 +42,22 @@ class LoginAPI: WebService {
             }
             .store(in: &cancellables)
     }
+    
+    func refreshToken(request: RefreshTokenRequest, completion: @escaping (Result<Token, Error>) -> Void) {
+        publisher(for: request.urlRequest)
+            .receive(on: DispatchQueue.main)
+            .sink { receiveCompletion in
+                switch receiveCompletion {
+                case .failure(let error):
+                    completion(.failure(error))
+                default:
+                    break
+                }
+            } receiveValue: { (authToken: AuthToken) in
+                completion(.success(authToken.data.attributes))
+            }
+            .store(in: &cancellables)
+    }
 }
 
 struct LoginRequest: Endpoint {
@@ -81,4 +97,42 @@ struct LoginRequest: Endpoint {
         let clientId = NimbleEndpoint.DefaultValues.clientId.rawValue
         let clientSecret = NimbleEndpoint.DefaultValues.clientSecret.rawValue
     }
+}
+
+struct RefreshTokenRequest: Endpoint {
+    let refreshToken: String
+    
+    var base: String {
+        NimbleEndpoint.DefaultValues.domain.rawValue
+    }
+    
+    var path: String {
+        "/api/v1/oauth/token"
+    }
+    
+    var method: HTTPMethod {
+        .post
+    }
+    
+    var queryItems: [URLQueryItem]? { nil }
+    
+    var httpBody: Data? {
+        let body = RequestBody(refreshToken: refreshToken)
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        let data = try? encoder.encode(body)
+        return data
+    }
+    
+    var contentType: String? {
+        NimbleEndpoint.DefaultValues.contentType.rawValue
+    }
+    
+    struct RequestBody: Encodable {
+        let refreshToken: String
+        let grantType = NimbleEndpoint.DefaultValues.refreshTokenGrantType.rawValue
+        let clientId = NimbleEndpoint.DefaultValues.clientId.rawValue
+        let clientSecret = NimbleEndpoint.DefaultValues.clientSecret.rawValue
+    }
+    
 }
