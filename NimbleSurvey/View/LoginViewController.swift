@@ -15,8 +15,24 @@ class LoginViewController: UIViewController {
     
     var service: LoginService?
     
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField! {
+        didSet {
+            let attributedText = NSAttributedString(
+                string: emailTextField.placeholder!,
+                attributes: [.foregroundColor: UIColor.systemGray]
+            )
+            emailTextField.attributedPlaceholder = attributedText
+        }
+    }
+    @IBOutlet private weak var passwordTextField: UITextField! {
+        didSet {
+            let attributedText = NSAttributedString(
+                string: passwordTextField.placeholder!,
+                attributes: [.foregroundColor: UIColor.systemGray]
+            )
+            passwordTextField.attributedPlaceholder = attributedText
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
