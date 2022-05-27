@@ -60,19 +60,31 @@ class LoginAPIServiceAdapter: LoginService {
 class SurveyAPIItemServiceAdapter: SurveyItemService {
     let api: SurveyAPI
     let token: Token
+    let showDetail: (Survey) -> Void
     private var pageNumber = 1
     private var pageSize = 5
     
     
-    init(api: SurveyAPI, token: Token) {
+    init(api: SurveyAPI, token: Token, showDetail: @escaping (Survey) -> Void) {
         self.api = api
         self.token = token
+        self.showDetail = showDetail
     }
     
     func loadSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void) {
         let surveyRequest = SurveyRequest(pageNumber: pageNumber, pageSize: pageSize, token: token)
-        api.getSurveys(request: surveyRequest) { result in
-            completion(result.map { $0.map(SurveyItemViewModel.init) })
+        api.getSurveys(request: surveyRequest) { [weak self] result in
+            switch result {
+            case .success(let surveys):
+                let surveyItems = surveys.map { survey in
+                    return SurveyItemViewModel(survey: survey) {
+                        self?.showDetail(survey)
+                    }
+                }
+                completion(.success(surveyItems))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
 }
