@@ -117,15 +117,27 @@
             </objects>
             <point key="canvasLocation" x="849" y="-9"/>
         </scene>
-        <!--Home Screen View Controller-->
+        <!--Survey Item View Controller-->
         <scene sceneID="Sx8-go-Tpv">
             <objects>
-                <viewController storyboardIdentifier="HomeScreenViewController" id="jhV-9K-eNS" customClass="HomeScreenViewController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyItemViewController" id="jhV-9K-eNS" customClass="SurveyItemViewController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8pz-Cc-EV9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survey Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cL-20-Itp">
+                                <rect key="frame" x="128.5" y="429.5" width="157" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MKT-H5-PAK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6cL-20-Itp" firstAttribute="centerX" secondItem="8pz-Cc-EV9" secondAttribute="centerX" id="AiG-ix-EXk"/>
+                            <constraint firstItem="6cL-20-Itp" firstAttribute="centerY" secondItem="8pz-Cc-EV9" secondAttribute="centerY" id="aLQ-Sb-QNp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYr-PZ-sQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

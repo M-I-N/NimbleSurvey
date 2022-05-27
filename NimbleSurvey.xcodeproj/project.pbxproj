@@ -28,6 +28,8 @@
 		AFEFBB4F284119F900896902 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB4E284119F900896902 /* Survey.swift */; };
 		AFEFBB5128411CE800896902 /* SurveyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5028411CE800896902 /* SurveyAPI.swift */; };
 		AFEFBB532841268B00896902 /* SurveyItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */; };
+		AFEFBB5628412B5000896902 /* Pageboy in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5528412B5000896902 /* Pageboy */; };
+		AFEFBB5828412D1600896902 /* SurveyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		AFEFBB4E284119F900896902 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		AFEFBB5028411CE800896902 /* SurveyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAPI.swift; sourceTree = "<group>"; };
 		AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewModel.swift; sourceTree = "<group>"; };
+		AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEFBB5628412B5000896902 /* Pageboy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +175,7 @@
 				AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */,
 				AFA31771283B926B0060FF51 /* LoginViewController.swift */,
 				AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */,
+				AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +213,9 @@
 			dependencies = (
 			);
 			name = NimbleSurvey;
+			packageProductDependencies = (
+				AFEFBB5528412B5000896902 /* Pageboy */,
+			);
 			productName = NimbleSurvey;
 			productReference = AFAD4F30283A412300773FF0 /* NimbleSurvey.app */;
 			productType = "com.apple.product-type.application";
@@ -236,6 +244,9 @@
 				Base,
 			);
 			mainGroup = AFAD4F27283A412300773FF0;
+			packageReferences = (
+				AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */,
+			);
 			productRefGroup = AFAD4F31283A412300773FF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFAD4F4D283A45E300773FF0 /* SignupViewController.swift in Sources */,
+				AFEFBB5828412D1600896902 /* SurveyItemViewController.swift in Sources */,
 				AF31C5CB283FD0CD00E517D1 /* AuthManager.swift in Sources */,
 				AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */,
 				AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */,
@@ -496,6 +508,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Pageboy/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFEFBB5528412B5000896902 /* Pageboy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */;
+			productName = Pageboy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFAD4F28283A412300773FF0 /* Project object */;
 }

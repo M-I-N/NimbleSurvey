@@ -58,7 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeHomeViewController(token: Token) -> UIViewController {
-        let home = HomeScreenViewController.instantiateFromStoryboard()
+        let home = HomeScreenViewController()
         
         let service = SurveyAPIItemServiceAdapter(api: .shared, token: token)
         home.service = service
