@@ -31,6 +31,7 @@
 		AFEFBB5628412B5000896902 /* Pageboy in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5528412B5000896902 /* Pageboy */; };
 		AFEFBB5828412D1600896902 /* SurveyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */; };
 		AFEFBB5B28413AD700896902 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5A28413AD700896902 /* Kingfisher */; };
+		AFEFBB5E284144A800896902 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5D284144A800896902 /* SkeletonView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEFBB5B28413AD700896902 /* Kingfisher in Frameworks */,
+				AFEFBB5E284144A800896902 /* SkeletonView in Frameworks */,
 				AFEFBB5628412B5000896902 /* Pageboy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +220,7 @@
 			packageProductDependencies = (
 				AFEFBB5528412B5000896902 /* Pageboy */,
 				AFEFBB5A28413AD700896902 /* Kingfisher */,
+				AFEFBB5D284144A800896902 /* SkeletonView */,
 			);
 			productName = NimbleSurvey;
 			productReference = AFAD4F30283A412300773FF0 /* NimbleSurvey.app */;
@@ -250,6 +253,7 @@
 			packageReferences = (
 				AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */,
 				AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				AFEFBB5C284144A800896902 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = AFAD4F31283A412300773FF0 /* Products */;
 			projectDirPath = "";
@@ -530,6 +534,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		AFEFBB5C284144A800896902 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -542,6 +554,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		AFEFBB5D284144A800896902 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEFBB5C284144A800896902 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

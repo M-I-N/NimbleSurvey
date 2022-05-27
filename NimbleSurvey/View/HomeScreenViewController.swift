@@ -41,7 +41,6 @@ class HomeScreenViewController: PageboyViewController {
     }
     
     private func loadSurveyItems() {
-        // show a loader maybe?
         service?.loadSurveyItems { [weak self] result in
             switch result {
             case .success(let surveyItems):
@@ -56,12 +55,20 @@ class HomeScreenViewController: PageboyViewController {
 
 extension HomeScreenViewController: PageboyViewControllerDataSource {
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
-        items.count
+        if items.isEmpty {
+            return 1
+        } else {
+            return items.count
+        }
     }
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
         let surveyItemViewController = SurveyItemViewController.instantiateFromStoryboard()
-        surveyItemViewController.surveyItemViewModel = items[index]
+        if items.isEmpty {
+            surveyItemViewController.isLoading = true
+        } else {
+            surveyItemViewController.surveyItemViewModel = items[index]
+        }
         return surveyItemViewController
     }
     
