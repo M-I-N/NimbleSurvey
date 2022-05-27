@@ -241,6 +241,36 @@
             </objects>
             <point key="canvasLocation" x="2501" y="-9"/>
         </scene>
+        <!--Survey Details View Controller-->
+        <scene sceneID="Wjb-T9-Jqy">
+            <objects>
+                <viewController storyboardIdentifier="SurveyDetailsViewController" id="Mk8-hy-yTe" customClass="SurveyDetailsViewController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dSo-ja-fKn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zu-iH-8Dc">
+                                <rect key="frame" x="170.5" y="429.5" width="73.5" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c8p-vx-IiC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9zu-iH-8Dc" firstAttribute="centerY" secondItem="dSo-ja-fKn" secondAttribute="centerY" id="0Ub-sJ-sdG"/>
+                            <constraint firstItem="9zu-iH-8Dc" firstAttribute="centerX" secondItem="dSo-ja-fKn" secondAttribute="centerX" id="LEC-Ma-teu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="surveyTitleLabel" destination="9zu-iH-8Dc" id="T7t-qf-0gW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1k-Wv-x8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3320" y="-9"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
