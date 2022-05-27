@@ -11,6 +11,11 @@ struct SurveyItemViewModel {
     let coverImage: String
     let name: String
     let description: String
+    
+    var coverImageURL: URL? {
+        let largeCoverImage = coverImage + "l"
+        return URL(string: largeCoverImage)
+    }
 }
 
 extension SurveyItemViewModel {

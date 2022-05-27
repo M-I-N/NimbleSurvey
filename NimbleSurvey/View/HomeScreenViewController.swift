@@ -24,7 +24,6 @@ class HomeScreenViewController: PageboyViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         dataSource = self
         loadSurveyItems()
     }
@@ -50,6 +49,7 @@ extension HomeScreenViewController: PageboyViewControllerDataSource {
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
         let surveyItemViewController = SurveyItemViewController.instantiateFromStoryboard()
+        surveyItemViewController.surveyItemViewModel = items[index]
         return surveyItemViewController
     }
     

@@ -30,6 +30,7 @@
 		AFEFBB532841268B00896902 /* SurveyItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */; };
 		AFEFBB5628412B5000896902 /* Pageboy in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5528412B5000896902 /* Pageboy */; };
 		AFEFBB5828412D1600896902 /* SurveyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */; };
+		AFEFBB5B28413AD700896902 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5A28413AD700896902 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEFBB5B28413AD700896902 /* Kingfisher in Frameworks */,
 				AFEFBB5628412B5000896902 /* Pageboy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +217,7 @@
 			name = NimbleSurvey;
 			packageProductDependencies = (
 				AFEFBB5528412B5000896902 /* Pageboy */,
+				AFEFBB5A28413AD700896902 /* Kingfisher */,
 			);
 			productName = NimbleSurvey;
 			productReference = AFAD4F30283A412300773FF0 /* NimbleSurvey.app */;
@@ -246,6 +249,7 @@
 			mainGroup = AFAD4F27283A412300773FF0;
 			packageReferences = (
 				AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */,
+				AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AFAD4F31283A412300773FF0 /* Products */;
 			projectDirPath = "";
@@ -518,6 +522,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -525,6 +537,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */;
 			productName = Pageboy;
+		};
+		AFEFBB5A28413AD700896902 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
