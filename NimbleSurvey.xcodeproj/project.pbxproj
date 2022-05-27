@@ -24,8 +24,10 @@
 		AFAD4F55283A490200773FF0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F53283A490200773FF0 /* Endpoint.swift */; };
 		AFAD4F56283A490200773FF0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F54283A490200773FF0 /* WebService.swift */; };
 		AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F58283A494100773FF0 /* SignupAPI.swift */; };
+		AFEFBB4D284117E400896902 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */; };
 		AFEFBB4F284119F900896902 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB4E284119F900896902 /* Survey.swift */; };
 		AFEFBB5128411CE800896902 /* SurveyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5028411CE800896902 /* SurveyAPI.swift */; };
+		AFEFBB532841268B00896902 /* SurveyItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +50,10 @@
 		AFAD4F53283A490200773FF0 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AFAD4F54283A490200773FF0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AFAD4F58283A494100773FF0 /* SignupAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAPI.swift; sourceTree = "<group>"; };
+		AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		AFEFBB4E284119F900896902 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		AFEFBB5028411CE800896902 /* SurveyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAPI.swift; sourceTree = "<group>"; };
+		AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 				AFAD4F52283A465500773FF0 /* Protocols+Extensions */,
 				AFAD4F48283A457E00773FF0 /* Resources */,
 				AFAD4F47283A453B00773FF0 /* SupportingFiles */,
+				AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */,
 			);
 			path = NimbleSurvey;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				AFAD4F49283A458F00773FF0 /* Storyboards */,
 				AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */,
 				AFA31771283B926B0060FF51 /* LoginViewController.swift */,
+				AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 				AFA31776283B956B0060FF51 /* AuthToken.swift in Sources */,
 				AFA31772283B926B0060FF51 /* LoginViewController.swift in Sources */,
 				AFEFBB5128411CE800896902 /* SurveyAPI.swift in Sources */,
+				AFEFBB4D284117E400896902 /* HomeScreenViewController.swift in Sources */,
+				AFEFBB532841268B00896902 /* SurveyItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
