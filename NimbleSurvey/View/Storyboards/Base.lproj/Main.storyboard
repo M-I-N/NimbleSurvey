@@ -118,6 +118,33 @@
             </objects>
             <point key="canvasLocation" x="849" y="-9"/>
         </scene>
+        <!--Home Screen View Controller-->
+        <scene sceneID="6Pf-1z-WeJ">
+            <objects>
+                <viewController storyboardIdentifier="HomeScreenViewController" id="6D5-qg-KQQ" customClass="HomeScreenViewController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMM-Mu-iEx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHK-sG-0yH">
+                                <rect key="frame" x="14" y="724" width="42.5" height="0.0"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S2z-1q-gDk"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S2z-1q-gDk" firstAttribute="bottom" secondItem="YHK-sG-0yH" secondAttribute="bottom" constant="138" id="14K-D9-zsn"/>
+                            <constraint firstItem="YHK-sG-0yH" firstAttribute="leading" secondItem="S2z-1q-gDk" secondAttribute="leading" constant="14" id="c6I-wS-SQE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="YHK-sG-0yH" id="dH0-Gg-6wS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncE-St-dZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="-9"/>
+        </scene>
         <!--Survey Item View Controller-->
         <scene sceneID="Sx8-go-Tpv">
             <objects>
@@ -193,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYr-PZ-sQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685.5072463768117" y="-9.375"/>
+            <point key="canvasLocation" x="2501" y="-9"/>
         </scene>
     </scenes>
     <resources>

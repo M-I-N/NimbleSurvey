@@ -16,8 +16,11 @@ class HomeScreenViewController: PageboyViewController {
     
     var service: SurveyItemService?
     
+    @IBOutlet private weak var pageControl: UIPageControl!
+    
     private var items = [SurveyItemViewModel]() {
         didSet {
+            pageControl.numberOfPages = items.count
             reloadData()
         }
     }
@@ -25,7 +28,16 @@ class HomeScreenViewController: PageboyViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
+        delegate = self
+        setupPageControl()
         loadSurveyItems()
+    }
+    
+    private func setupPageControl() {
+        if #available(iOS 14.0, *) {
+          pageControl.backgroundStyle = .minimal
+          pageControl.allowsContinuousInteraction = false
+        }
     }
     
     private func loadSurveyItems() {
@@ -55,5 +67,24 @@ extension HomeScreenViewController: PageboyViewControllerDataSource {
     
     func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
         nil
+    }
+}
+
+extension HomeScreenViewController: PageboyViewControllerDelegate {
+    
+    func pageboyViewController(_ pageboyViewController: PageboyViewController, willScrollToPageAt index: PageboyViewController.PageIndex, direction: PageboyViewController.NavigationDirection, animated: Bool) { }
+    
+    func pageboyViewController(_ pageboyViewController: PageboyViewController, didScrollToPageAt index: PageboyViewController.PageIndex, direction: PageboyViewController.NavigationDirection, animated: Bool) {
+        pageControl.currentPage = index
+    }
+    
+    func pageboyViewController(_ pageboyViewController: PageboyViewController, didScrollTo position: CGPoint, direction: PageboyViewController.NavigationDirection, animated: Bool) { }
+    
+    func pageboyViewController(_ pageboyViewController: PageboyViewController, didReloadWith currentViewController: UIViewController, currentPageIndex: PageboyViewController.PageIndex) { }
+}
+
+extension HomeScreenViewController: StoryboardInstantiable {
+    static var storyboardName: UIStoryboard.Name {
+        .main
     }
 }
