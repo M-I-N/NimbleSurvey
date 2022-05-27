@@ -26,6 +26,9 @@ protocol Endpoint {
     
     /// Accepted content type of the Endpoint. Ex. `application/json`
     var contentType: String? { get }
+    
+    /// Custom header values for the Endpoint. Ex. `["Authorization": "Auth-Token"]`. Defaults to **Empty**.
+    var customHeaders: [String: String] { get }
 }
 
 extension Endpoint {
@@ -36,6 +39,10 @@ extension Endpoint {
     
     var httpBody: Data? {
         return nil
+    }
+    
+    var customHeaders: [String: String] {
+        return [:]
     }
 
     private var urlComponents: URLComponents? {
@@ -49,6 +56,11 @@ extension Endpoint {
         let url = urlComponents?.url ?? URL(string: "\(base)\(path)")!
         var request = URLRequest(url: url)
         request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        
+        for (key, value) in customHeaders {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+        
         request.httpMethod = method.rawValue
         request.httpBody = httpBody
         return request

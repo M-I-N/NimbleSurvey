@@ -11,6 +11,9 @@ struct NimbleEndpoint {
     enum Keys: String {
         case clientId = "client_id"
         case clientSecret = "client_secret"
+        case pageNumber = "page[number]"
+        case pageSize = "page[size]"
+        case authorization = "Authorization"
     }
     
     enum DefaultValues: String {

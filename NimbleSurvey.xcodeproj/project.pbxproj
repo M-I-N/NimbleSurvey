@@ -24,6 +24,8 @@
 		AFAD4F55283A490200773FF0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F53283A490200773FF0 /* Endpoint.swift */; };
 		AFAD4F56283A490200773FF0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F54283A490200773FF0 /* WebService.swift */; };
 		AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F58283A494100773FF0 /* SignupAPI.swift */; };
+		AFEFBB4F284119F900896902 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB4E284119F900896902 /* Survey.swift */; };
+		AFEFBB5128411CE800896902 /* SurveyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5028411CE800896902 /* SurveyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		AFAD4F53283A490200773FF0 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AFAD4F54283A490200773FF0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AFAD4F58283A494100773FF0 /* SignupAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAPI.swift; sourceTree = "<group>"; };
+		AFEFBB4E284119F900896902 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		AFEFBB5028411CE800896902 /* SurveyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 				AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */,
 				AFAD4F58283A494100773FF0 /* SignupAPI.swift */,
 				AFA31773283B94CC0060FF51 /* LoginAPI.swift */,
+				AFEFBB5028411CE800896902 /* SurveyAPI.swift */,
 			);
 			path = "API+Services";
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA31775283B956B0060FF51 /* AuthToken.swift */,
+				AFEFBB4E284119F900896902 /* Survey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */,
 				AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */,
 				AFAD4F56283A490200773FF0 /* WebService.swift in Sources */,
+				AFEFBB4F284119F900896902 /* Survey.swift in Sources */,
 				AFA31774283B94CC0060FF51 /* LoginAPI.swift in Sources */,
 				AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */,
 				AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */,
@@ -265,6 +272,7 @@
 				AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */,
 				AFA31776283B956B0060FF51 /* AuthToken.swift in Sources */,
 				AFA31772283B926B0060FF51 /* LoginViewController.swift in Sources */,
+				AFEFBB5128411CE800896902 /* SurveyAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
