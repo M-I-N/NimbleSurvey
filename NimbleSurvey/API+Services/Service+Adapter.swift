@@ -33,9 +33,11 @@ class SignupAPIServiceAdapter: SignupService {
 class LoginAPIServiceAdapter: LoginService {
     let api: LoginAPI
     let loginCompletion: () -> Void
+    let authManager: AuthManager
     
-    init(api: LoginAPI, loginCompletion: @escaping () -> Void) {
+    init(api: LoginAPI, authManager: AuthManager, loginCompletion: @escaping () -> Void) {
         self.api = api
+        self.authManager = authManager
         self.loginCompletion = loginCompletion
     }
     
@@ -45,6 +47,7 @@ class LoginAPIServiceAdapter: LoginService {
             switch result {
             case .success(let token):
                 print("Login succeeded with token: \(token)")
+                self?.authManager.save(token: token)
                 completion(.success(()))
                 self?.loginCompletion()
             case .failure(let error):

@@ -19,7 +19,7 @@ struct AuthToken: Decodable {
 }
 
 // MARK: - Token
-struct Token: Decodable {
+struct Token: Codable {
     let accessToken: String
     let refreshToken: String
     let tokenType: String
