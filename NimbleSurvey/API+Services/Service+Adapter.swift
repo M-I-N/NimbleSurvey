@@ -32,10 +32,10 @@ class SignupAPIServiceAdapter: SignupService {
 
 class LoginAPIServiceAdapter: LoginService {
     let api: LoginAPI
-    let loginCompletion: () -> Void
+    let loginCompletion: (Token) -> Void
     let authManager: AuthManager
     
-    init(api: LoginAPI, authManager: AuthManager, loginCompletion: @escaping () -> Void) {
+    init(api: LoginAPI, authManager: AuthManager, loginCompletion: @escaping (Token) -> Void) {
         self.api = api
         self.authManager = authManager
         self.loginCompletion = loginCompletion
@@ -49,10 +49,30 @@ class LoginAPIServiceAdapter: LoginService {
                 print("Login succeeded with token: \(token)")
                 self?.authManager.save(token: token)
                 completion(.success(()))
-                self?.loginCompletion()
+                self?.loginCompletion(token)
             case .failure(let error):
                 completion(.failure(error))
             }
+        }
+    }
+}
+
+class SurveyAPIItemServiceAdapter: SurveyItemService {
+    let api: SurveyAPI
+    let token: Token
+    private var pageNumber = 1
+    private var pageSize = 5
+    
+    
+    init(api: SurveyAPI, token: Token) {
+        self.api = api
+        self.token = token
+    }
+    
+    func loadSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void) {
+        let surveyRequest = SurveyRequest(pageNumber: pageNumber, pageSize: pageSize, token: token)
+        api.getSurveys(request: surveyRequest) { result in
+            completion(result.map { $0.map(SurveyItemViewModel.init) })
         }
     }
 }

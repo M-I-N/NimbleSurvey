@@ -29,11 +29,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeRootViewController() -> UIViewController {
-        if authManager.isTokenStillValid {
-            return makeHomeViewController()
+        if let token = authManager.token, authManager.isTokenStillValid {
+            return makeHomeViewController(token: token)
         } else {
-            return makeLoginViewController { [weak self] in
-                self?.window?.rootViewController = self?.makeHomeViewController()
+            return makeLoginViewController { [weak self] token in
+                self?.window?.rootViewController = self?.makeHomeViewController(token: token)
                 self?.window?.makeKeyAndVisible()
             }
         }
@@ -48,7 +48,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return singUpVC
     }
     
-    private func makeLoginViewController(loginCompletion: @escaping () -> Void) -> LoginViewController {
+    private func makeLoginViewController(loginCompletion: @escaping (Token) -> Void) -> LoginViewController {
         let loginVC = LoginViewController.instantiateFromStoryboard()
         
         let service = LoginAPIServiceAdapter(api: loginAPI, authManager: authManager, loginCompletion: loginCompletion)
@@ -57,8 +57,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return loginVC
     }
     
-    private func makeHomeViewController() -> UIViewController {
-        UIViewController()
+    private func makeHomeViewController(token: Token) -> UIViewController {
+        let home = HomeScreenViewController.instantiateFromStoryboard()
+        
+        let service = SurveyAPIItemServiceAdapter(api: .shared, token: token)
+        home.service = service
+        return home
     }
     
 }

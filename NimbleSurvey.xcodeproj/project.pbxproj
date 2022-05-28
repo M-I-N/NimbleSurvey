@@ -24,6 +24,14 @@
 		AFAD4F55283A490200773FF0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F53283A490200773FF0 /* Endpoint.swift */; };
 		AFAD4F56283A490200773FF0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F54283A490200773FF0 /* WebService.swift */; };
 		AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD4F58283A494100773FF0 /* SignupAPI.swift */; };
+		AFEFBB4D284117E400896902 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */; };
+		AFEFBB4F284119F900896902 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB4E284119F900896902 /* Survey.swift */; };
+		AFEFBB5128411CE800896902 /* SurveyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5028411CE800896902 /* SurveyAPI.swift */; };
+		AFEFBB532841268B00896902 /* SurveyItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */; };
+		AFEFBB5628412B5000896902 /* Pageboy in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5528412B5000896902 /* Pageboy */; };
+		AFEFBB5828412D1600896902 /* SurveyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */; };
+		AFEFBB5B28413AD700896902 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5A28413AD700896902 /* Kingfisher */; };
+		AFEFBB5E284144A800896902 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5D284144A800896902 /* SkeletonView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,11 @@
 		AFAD4F53283A490200773FF0 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AFAD4F54283A490200773FF0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AFAD4F58283A494100773FF0 /* SignupAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAPI.swift; sourceTree = "<group>"; };
+		AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		AFEFBB4E284119F900896902 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		AFEFBB5028411CE800896902 /* SurveyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAPI.swift; sourceTree = "<group>"; };
+		AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewModel.swift; sourceTree = "<group>"; };
+		AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEFBB5B28413AD700896902 /* Kingfisher in Frameworks */,
+				AFEFBB5E284144A800896902 /* SkeletonView in Frameworks */,
+				AFEFBB5628412B5000896902 /* Pageboy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +90,7 @@
 				AFA3176F283B802C0060FF51 /* Endpoint+NimbleDefaults.swift */,
 				AFAD4F58283A494100773FF0 /* SignupAPI.swift */,
 				AFA31773283B94CC0060FF51 /* LoginAPI.swift */,
+				AFEFBB5028411CE800896902 /* SurveyAPI.swift */,
 			);
 			path = "API+Services";
 			sourceTree = "<group>";
@@ -82,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA31775283B956B0060FF51 /* AuthToken.swift */,
+				AFEFBB4E284119F900896902 /* Survey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +132,7 @@
 				AFAD4F52283A465500773FF0 /* Protocols+Extensions */,
 				AFAD4F48283A457E00773FF0 /* Resources */,
 				AFAD4F47283A453B00773FF0 /* SupportingFiles */,
+				AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */,
 			);
 			path = NimbleSurvey;
 			sourceTree = "<group>";
@@ -159,6 +178,8 @@
 				AFAD4F49283A458F00773FF0 /* Storyboards */,
 				AFAD4F4C283A45E300773FF0 /* SignupViewController.swift */,
 				AFA31771283B926B0060FF51 /* LoginViewController.swift */,
+				AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */,
+				AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +217,11 @@
 			dependencies = (
 			);
 			name = NimbleSurvey;
+			packageProductDependencies = (
+				AFEFBB5528412B5000896902 /* Pageboy */,
+				AFEFBB5A28413AD700896902 /* Kingfisher */,
+				AFEFBB5D284144A800896902 /* SkeletonView */,
+			);
 			productName = NimbleSurvey;
 			productReference = AFAD4F30283A412300773FF0 /* NimbleSurvey.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +250,11 @@
 				Base,
 			);
 			mainGroup = AFAD4F27283A412300773FF0;
+			packageReferences = (
+				AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */,
+				AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				AFEFBB5C284144A800896902 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
 			productRefGroup = AFAD4F31283A412300773FF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -252,10 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFAD4F4D283A45E300773FF0 /* SignupViewController.swift in Sources */,
+				AFEFBB5828412D1600896902 /* SurveyItemViewController.swift in Sources */,
 				AF31C5CB283FD0CD00E517D1 /* AuthManager.swift in Sources */,
 				AFAD4F4F283A463500773FF0 /* UIStoryboardNames.swift in Sources */,
 				AFAD4F59283A494100773FF0 /* SignupAPI.swift in Sources */,
 				AFAD4F56283A490200773FF0 /* WebService.swift in Sources */,
+				AFEFBB4F284119F900896902 /* Survey.swift in Sources */,
 				AFA31774283B94CC0060FF51 /* LoginAPI.swift in Sources */,
 				AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */,
 				AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */,
@@ -265,6 +298,9 @@
 				AFAD4F36283A412300773FF0 /* SceneDelegate.swift in Sources */,
 				AFA31776283B956B0060FF51 /* AuthToken.swift in Sources */,
 				AFA31772283B926B0060FF51 /* LoginViewController.swift in Sources */,
+				AFEFBB5128411CE800896902 /* SurveyAPI.swift in Sources */,
+				AFEFBB4D284117E400896902 /* HomeScreenViewController.swift in Sources */,
+				AFEFBB532841268B00896902 /* SurveyItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +516,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Pageboy/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		AFEFBB5C284144A800896902 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFEFBB5528412B5000896902 /* Pageboy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEFBB5428412B5000896902 /* XCRemoteSwiftPackageReference "Pageboy" */;
+			productName = Pageboy;
+		};
+		AFEFBB5A28413AD700896902 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEFBB5928413AD700896902 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		AFEFBB5D284144A800896902 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEFBB5C284144A800896902 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFAD4F28283A412300773FF0 /* Project object */;
 }
