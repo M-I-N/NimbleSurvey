@@ -85,6 +85,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		AF39A57928420B18009BB0BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AF8E50D9283AA09F00B3866B /* API+Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,13 +136,13 @@
 				AFAD4F4A283A459B00773FF0 /* App */,
 				AFA31777283B95700060FF51 /* Model */,
 				AFAD4F4B283A45CD00773FF0 /* View */,
+				AF39A57928420B18009BB0BE /* ViewModel */,
 				AF8E50D9283AA09F00B3866B /* API+Services */,
 				AF31C5CC283FD75600E517D1 /* Managers */,
 				AFAD4F57283A490900773FF0 /* Networking */,
 				AFAD4F52283A465500773FF0 /* Protocols+Extensions */,
 				AFAD4F48283A457E00773FF0 /* Resources */,
 				AFAD4F47283A453B00773FF0 /* SupportingFiles */,
-				AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */,
 			);
 			path = NimbleSurvey;
 			sourceTree = "<group>";
