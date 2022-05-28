@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "59eb199fdb8dd47733624e8b0277822d0232579e",
+        "version" : "7.2.2"
+      }
+    },
+    {
+      "identity" : "pageboy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uias/Pageboy/",
+      "state" : {
+        "revision" : "34ecb6e7c4e0e07494960ab2f7cc9a02293915a6",
+        "version" : "3.6.2"
+      }
+    },
+    {
+      "identity" : "skeletonview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Juanpe/SkeletonView.git",
+      "state" : {
+        "revision" : "9e61ff3a85a3780a2cdfceae0257ad32fa8ae4d3",
+        "version" : "1.29.2"
+      }
+    }
+  ],
+  "version" : 2
+}
