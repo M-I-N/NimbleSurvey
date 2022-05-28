@@ -32,6 +32,7 @@
 		AFEFBB5828412D1600896902 /* SurveyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */; };
 		AFEFBB5B28413AD700896902 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5A28413AD700896902 /* Kingfisher */; };
 		AFEFBB5E284144A800896902 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = AFEFBB5D284144A800896902 /* SkeletonView */; };
+		AFEFBB62284159B600896902 /* SurveyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFBB61284159B600896902 /* SurveyDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		AFEFBB5028411CE800896902 /* SurveyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAPI.swift; sourceTree = "<group>"; };
 		AFEFBB522841268B00896902 /* SurveyItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewModel.swift; sourceTree = "<group>"; };
 		AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewController.swift; sourceTree = "<group>"; };
+		AFEFBB61284159B600896902 /* SurveyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				AFA31771283B926B0060FF51 /* LoginViewController.swift */,
 				AFEFBB4C284117E400896902 /* HomeScreenViewController.swift */,
 				AFEFBB5728412D1600896902 /* SurveyItemViewController.swift */,
+				AFEFBB61284159B600896902 /* SurveyDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				AFEFBB4F284119F900896902 /* Survey.swift in Sources */,
 				AFA31774283B94CC0060FF51 /* LoginAPI.swift in Sources */,
 				AFAD4F34283A412300773FF0 /* AppDelegate.swift in Sources */,
+				AFEFBB62284159B600896902 /* SurveyDetailsViewController.swift in Sources */,
 				AFAD4F51283A465000773FF0 /* UIViewController+Storyboard.swift in Sources */,
 				AF8E50D8283A9E3500B3866B /* Service+Adapter.swift in Sources */,
 				AFA31770283B802C0060FF51 /* Endpoint+NimbleDefaults.swift in Sources */,

@@ -11,6 +11,7 @@ struct SurveyItemViewModel {
     let coverImage: String
     let name: String
     let description: String
+    let showDetail: () -> Void
     
     var coverImageURL: URL? {
         let largeCoverImage = coverImage + "l"
@@ -19,9 +20,10 @@ struct SurveyItemViewModel {
 }
 
 extension SurveyItemViewModel {
-    init(survey: Survey) {
+    init(survey: Survey, showDetail: @escaping () -> Void) {
         coverImage = survey.attributes.coverImageURL
         name = survey.attributes.title
         description = survey.attributes.attributesDescription
+        self.showDetail = showDetail
     }
 }

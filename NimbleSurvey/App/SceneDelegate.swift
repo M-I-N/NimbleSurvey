@@ -60,10 +60,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func makeHomeViewController(token: Token) -> UIViewController {
         let home = HomeScreenViewController.instantiateFromStoryboard()
         
-        let service = SurveyAPIItemServiceAdapter(api: .shared, token: token)
+        let service = SurveyAPIItemServiceAdapter(api: .shared, token: token) { [home] survey in
+            home.showDetails(of: survey)
+        }
+        
         home.service = service
-        return home
+        return UINavigationController(rootViewController: home)
     }
     
 }
 
+extension UIViewController {
+    func showDetails(of survey: Survey) {
+        let detailsVC = SurveyDetailsViewController.instantiateFromStoryboard()
+        detailsVC.title = survey.attributes.title
+        detailsVC.survey = survey
+        show(detailsVC, sender: self)
+    }
+}

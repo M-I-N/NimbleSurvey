@@ -41,7 +41,7 @@ class SurveyItemViewController: UIViewController {
     }
     
     @IBAction private func gotoDetailsButtonTapped(_ sender: UIButton) {
-        
+        surveyItemViewModel.showDetail()
     }
 }
 
