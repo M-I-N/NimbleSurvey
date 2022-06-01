@@ -17,7 +17,17 @@ struct NimbleEndpoint {
     }
     
     enum DefaultValues: String {
+        // FIXME: Fix the domains when available
+#if DEV_DEBUG
+        case domain = "https://nimble-survey-web-staging.herokuapp.com/"
+#elseif DEV_RELEASE
+        case domain = "https://nimble-survey-web-staging.herokuapp.com/"
+#elseif DEBUG
         case domain = "https://survey-api.nimblehq.co"
+#else
+        case domain = "https://survey-api.nimblehq.co"
+#endif
+        
         case contentType = "application/json"
         case clientId = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE"
         case clientSecret = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU"
