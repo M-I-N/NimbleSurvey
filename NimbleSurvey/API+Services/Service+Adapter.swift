@@ -71,7 +71,8 @@ class SurveyAPIItemServiceAdapter: SurveyItemService {
         self.showDetail = showDetail
     }
     
-    func loadSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void) {
+    func loadFirstPageSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void) {
+        pageNumber = 1
         let surveyRequest = SurveyRequest(pageNumber: pageNumber, pageSize: pageSize, token: token)
         api.getSurveys(request: surveyRequest) { [weak self] result in
             switch result {
@@ -82,6 +83,25 @@ class SurveyAPIItemServiceAdapter: SurveyItemService {
                     }
                 }
                 completion(.success(surveyItems))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func loadNextPageSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void) {
+        let surveyRequest = SurveyRequest(pageNumber: pageNumber + 1, pageSize: pageSize, token: token)
+        api.getSurveys(request: surveyRequest) { [weak self] result in
+            switch result {
+            case .success(let surveys):
+                let surveyItems = surveys.map { survey in
+                    return SurveyItemViewModel(survey: survey) {
+                        self?.showDetail(survey)
+                    }
+                }
+                completion(.success(surveyItems))
+                // increment page number for next successive calls
+                self?.pageNumber += 1
             case .failure(let error):
                 completion(.failure(error))
             }

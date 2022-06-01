@@ -9,7 +9,8 @@ import UIKit
 import Pageboy
 
 protocol SurveyItemService {
-    func loadSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void)
+    func loadFirstPageSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void)
+    func loadNextPageSurveyItems(completion: @escaping (Result<[SurveyItemViewModel], Error>) -> Void)
 }
 
 class HomeScreenViewController: PageboyViewController {
@@ -41,7 +42,7 @@ class HomeScreenViewController: PageboyViewController {
     }
     
     private func loadSurveyItems() {
-        service?.loadSurveyItems { [weak self] result in
+        service?.loadFirstPageSurveyItems { [weak self] result in
             switch result {
             case .success(let surveyItems):
                 self?.items = surveyItems
@@ -79,7 +80,19 @@ extension HomeScreenViewController: PageboyViewControllerDataSource {
 
 extension HomeScreenViewController: PageboyViewControllerDelegate {
     
-    func pageboyViewController(_ pageboyViewController: PageboyViewController, willScrollToPageAt index: PageboyViewController.PageIndex, direction: PageboyViewController.NavigationDirection, animated: Bool) { }
+    func pageboyViewController(_ pageboyViewController: PageboyViewController, willScrollToPageAt index: PageboyViewController.PageIndex, direction: PageboyViewController.NavigationDirection, animated: Bool) {
+        guard !items.isEmpty else { return }
+        if index >= items.count - 1 {
+            service?.loadNextPageSurveyItems { [weak self] result in
+                switch result {
+                case .success(let newItems):
+                    self?.items += newItems
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
     
     func pageboyViewController(_ pageboyViewController: PageboyViewController, didScrollToPageAt index: PageboyViewController.PageIndex, direction: PageboyViewController.NavigationDirection, animated: Bool) {
         pageControl.currentPage = index
